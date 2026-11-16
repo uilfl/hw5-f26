@@ -20,10 +20,6 @@ feedback from the checker
 
 */
 
-document.querySelector("#play").addEventListener("click", function () {
-  console.log("Play Video");
-  video.play();
-});
 document.querySelector("#pause").addEventListener("click", function () {
   console.log("Pause Video");
   video.pause();
@@ -33,6 +29,7 @@ let slider = document.querySelector("#slider");
 let volume = document.querySelector("#volume");
 
 document.querySelector("#play").addEventListener("click", function () {
+  console.log("Play Video");
   video.volume = slider.value / 100;
   volume.textContent = slider.value + "%";
   video.play();
