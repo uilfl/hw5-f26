@@ -32,7 +32,11 @@ document.querySelector("#pause").addEventListener("click", function () {
 let slider = document.querySelector("#slider");
 let volume = document.querySelector("#volume");
 
-volume.innerHTML = slider.value + "%";
+document.querySelector("#play").addEventListener("click", function () {
+  video.volume = slider.value / 100;
+  volume.textContent = slider.value + "%";
+  video.play();
+});
 
 slider.oninput = function () {
   volume.innerHTML = this.value + "%";
