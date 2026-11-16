@@ -87,11 +87,11 @@ let original = document.querySelector("#orig");
 let styled = document.querySelector("#vintage");
 
 original.addEventListener("click", function () {
-  video.classList.remove("oldschool");
+  video.classList.remove("oldSchool");
   figcaption.innerHTML = "Original Video";
 });
 
 styled.addEventListener("click", function () {
-  video.classList.add("oldschool");
+  video.classList.add("oldSchool");
   figcaption.innerHTML = "Styled Video";
 });
