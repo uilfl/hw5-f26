@@ -11,6 +11,15 @@ window.addEventListener("load", function () {
 // playing controls
 //
 
+/*
+feedback from the checker
+----ERROR!!!!!!
+-3: Video 'Old School' style class not set correctly. (Did you apply the class to the video tag?)
+-3: Video unmute button text is not displaying correctly
+-3: Video volume [ before ] play is not displaying correctly. It is supposed to be updated
+
+*/
+
 document.querySelector("#play").addEventListener("click", function () {
   console.log("Play Video");
   video.play();
@@ -38,12 +47,12 @@ function updateMuteButton() {
     video.muted = false;
     slider.value = 10;
     volume.innerHTML = slider.value + "%";
-    mute.innerHTML = "Unmute";
+    mute.innerHTML = "Mute";
   } else {
     video.muted = true;
     slider.value = 0;
     volume.innerHTML = slider.value + "%";
-    mute.innerHTML = "Mute";
+    mute.innerHTML = "Unmute";
   }
 }
 
@@ -73,7 +82,6 @@ const figcaption = document.querySelector("figcaption");
 let original = document.querySelector("#orig");
 let styled = document.querySelector("#vintage");
 
-// if it is styled we use the .oldschool css class to style the video, if it is original we remove the class
 original.addEventListener("click", function () {
   video.classList.remove("oldschool");
   figcaption.innerHTML = "Original Video";
